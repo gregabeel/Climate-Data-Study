@@ -11,6 +11,10 @@ import java.util.*;				// For Scanner and InputMismatchException
 import javax.swing.JOptionPane; //For the JOptionaPane class
 
 public class ParallelArraysGregMikeWork {
+	/**
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String [] args)throws IOException
 	{
 		final int ARRAY_SIZE = 20;
@@ -25,9 +29,10 @@ public class ParallelArraysGregMikeWork {
 		Scanner inputFile = new Scanner(myFile);					//scanner to input file name
 		try
 		{
-			//Try to display one too many array elements.
-			//myFile = new File("DateTemp.csv");
-			Scanner inputFile = new Scanner(myFile);					//scanner to input file name
+			//try (//Try to display one too many array elements.
+						//myFile = new File("DateTemp.csv");
+			//Scanner inputFile = new Scanner(myFile)) {
+			//}
 			for (int i = 0; i <= templow.length; i++);
 			for (int i = 0; i <= temphigh.length; i++);
 			//System.out.println(temphigh[i]);
@@ -37,9 +42,9 @@ public class ParallelArraysGregMikeWork {
 		catch (ArrayIndexOutOfBoundsException e)
 		{
 			System.out.println("Invalid array index exceeds Array Size.");					//catch block to declare the array index was too large
-		}
+		/* }
 		catch (FileNotFoundException e)
-		{
+		{*/
 			System.out.println("The File was not Found, please download file with name DateTemp.csv");
 			System.exit(1);
 		}
@@ -125,7 +130,7 @@ public class ParallelArraysGregMikeWork {
 
 
 
-	/*public static double getAvg(double [] r)						//getavg array
+	public static double getAvg(double [] r)						//getavg array
 	{
 		double total = 0.0;
 
@@ -137,6 +142,6 @@ public class ParallelArraysGregMikeWork {
 		double average = total/r.length;
 		return average;
 
-	}*/
+	}
 
 }// end of Array class
